@@ -3,11 +3,12 @@
     "description": "Telegram mirror bot with python",
     "logo": "https://telegra.ph/file/6507910fd06d18dfaba82.jpg",
     "keywords": [
+      "bot",
       "telegram",
       "python"
     ],
     "repository": "https://github.com/breakdowns/slam-mirrorbot",
-    "website": "https://t.me/SlamMirrorSupport",
+    "website": "https://t.me/SlamMirrorSupportGroup",
     "success_url": "https://github.com/breakdowns/slam-mirrorbot/blob/master/README.md",
     "stack": "container",
     "env": {
@@ -25,7 +26,7 @@
       },
       "DOWNLOAD_DIR": {
         "description": "The path to the local folder where the downloads should be downloaded to.",
-		"value": "/home/username/mirror-bot/downloads",
+        "value": "/home/slam/mirror-bot/downloads",
         "required": false
       },
       "DOWNLOAD_STATUS_UPDATE_INTERVAL": {
@@ -46,12 +47,11 @@
         "required": false
       },
       "USE_SERVICE_ACCOUNTS": {
-        "description": "Whether to use service accounts or not. For this to work see 'Using service accounts' section below.",
-        "value": "False",
+        "description": "Whether to use service accounts or not. For this to work see 'Using service accounts' in repo.",
         "required": false
       },
       "AUTHORIZED_CHATS": {
-        "description": "Put User ID and Chat ID of you want to authorize.",
+        "description": "Fill User ID and Chat ID of you want to authorize.",
         "required": false
       },
       "INDEX_URL": {
@@ -66,6 +66,18 @@
         "description": "This is to authenticate to your telegram account for downloading Telegram files. You can get this from https://my.telegram.org.",
         "required": true
       },
+      "HEROKU_API_KEY": {
+        "description": "Your Heroku API key, get it from https://dashboard.heroku.com/account.",
+        "required": true
+      },
+      "HEROKU_APP_NAME": {
+        "description": "Add the Heroku app name here.",
+        "required": true
+      },
+      "UPTOBOX_TOKEN": {
+        "description": "Uptobox premium token to mirror uptobox links. Get it from https://uptobox.com/my_account.",
+        "required": false
+      },
       "MEGA_API_KEY": {
         "description": "Mega.nz api key to mirror mega.nz links. Get it from https://mega.nz/sdk.",
         "required": false
@@ -78,8 +90,58 @@
         "description": "Your password for your mega.nz account.",
         "required": false
       },
+      "BLOCK_MEGA_FOLDER": {
+        "description": "If you want to remove mega.nz folder support, set it to True.",
+        "required": false
+      },
       "BLOCK_MEGA_LINKS": {
         "description": "If you want to remove mega.nz mirror support, set it to True.",
+        "required": false
+      },
+      "ENABLE_FILESIZE_LIMIT": {
+        "description": "Set it to True if you want to use MAX_TORRENT_SIZE.",
+        "value": "False",
+        "required": false
+      },
+      "MAX_TORRENT_SIZE": {
+        "description": "To limit the torrent mirror size, Fill The amount you want to limit, examples: if you fill 15 it will limit 15gb.",
+        "value": "15",
+        "required": false
+      },
+      "STOP_DUPLICATE_MIRROR": {
+        "description": "If this field is set to True, bot will check file in drive, if it is present in drive, downloading will be stopped.",
+        "required": false
+      },
+      "SHORTENER": {
+        "description": "If you want to use shortener in Gdrive and index link.",
+        "required": false
+      },
+      "SHORTENER_API": {
+        "description": "Fill your shortener api key if you are using shortener.",
+        "required": false
+      },
+      "BUTTON_THREE_NAME": {
+        "description": "Extra buttons (optional).",
+        "required": false
+      },
+      "BUTTON_THREE_URL": {
+        "description": "Fill your URL if you are using extra buttons.",
+        "required": false
+      },
+      "BUTTON_FOUR_NAME": {
+        "description": "Extra buttons (optional).",
+        "required": false
+      },
+      "BUTTON_FOUR_URL": {
+        "description": "Fill your URL if you are using extra buttons.",
+        "required": false
+      },
+      "BUTTON_FIVE_NAME": {
+        "description": "Extra buttons (optional).",
+        "required": false
+      },
+      "BUTTON_FIVE_URL": {
+        "description": "Fill your URL if you are using extra buttons.",
         "required": false
       }
     }

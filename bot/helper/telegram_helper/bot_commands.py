@@ -10,15 +10,18 @@ class _BotCommands:
         self.StatusCommand = 'status'
         self.AuthorizeCommand = 'authorize'
         self.UnAuthorizeCommand = 'unauthorize'
+        self.AuthListCommand = 'authlist'
         self.PingCommand = 'ping'
         self.RestartCommand = 'restart'
         self.StatsCommand = 'stats'
         self.HelpCommand = 'help'
         self.LogCommand = 'log'
         self.SpeedCommand = 'speedtest'
-        self.CloneCommand = "clone"
+        self.CloneCommand = 'clone'
         self.WatchCommand = 'watch'
         self.TarWatchCommand = 'tarwatch'
         self.DeleteCommand = 'del'
+        self.UsageCommand = 'usage'
+        self.RepoCommand = 'repo'
 
 BotCommands = _BotCommands()
